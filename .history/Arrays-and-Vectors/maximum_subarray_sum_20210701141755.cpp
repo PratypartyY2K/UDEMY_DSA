@@ -78,7 +78,7 @@ using namespace std;
 
 // Dynamic Programming paradigm (takes into account if array has all negative elements)
 
-int maxSubarraySum(vector<int> arr){
+/*int maxSubarraySum(vector<int> arr){
     //Complete this function, your function should return the maximum subarray sum
     int n = arr.size();
     
@@ -94,10 +94,10 @@ int maxSubarraySum(vector<int> arr){
         }
     }
     return max_global;
-}
+}*/
 
 // Return 0 if all elements of the array are negative
-/*
+
 int maxSubarraySum(vector<int> arr){
     //Complete this function, your function should return the maximum subarray sum
     int n = arr.size();
@@ -115,10 +115,10 @@ int maxSubarraySum(vector<int> arr){
         }
     }
     return max_global;
-}*/
+}
 
 int main() {
-    vector<int> arr{-500};
+    vector<int> arr{-5, -2, -2, -1, -6, -8};
     cout << maxSubarraySum(arr) << endl;
     return 0;
 }
