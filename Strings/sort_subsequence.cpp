@@ -28,7 +28,7 @@ void subsequence(string s,string o, vector<string> &v){
 
 	//rec case
 	char ch = s[0];
-	string reduced_input = s.substr(1);
+	string reduced_input = s.substr(1); // chop off the first character from the remaining string
 
 	//includes
 	subsequence(reduced_input, o + ch, v); // include the character
