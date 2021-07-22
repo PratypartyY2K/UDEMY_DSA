@@ -42,8 +42,8 @@ string find_window(string s,string p){ // s -> string, p -> pattern
 	int cnt = 0;
 	int start = 0; // left contraction (starting point of window    )
 	int start_idx = -1; //start_idx for best window
-	int min_so_far = INT_MAX; //large number
-	int window_size ;
+	int min_so_far = INT_MAX; // large number
+	int window_size;
 
 
 	for(int i=0 ; i < s.length(); i++){
@@ -75,7 +75,7 @@ string find_window(string s,string p){ // s -> string, p -> pattern
 			}
 
 			//note. the window size
-			window_size = i - start + 1;
+			window_size = i - start + 1; // window size is from start till i
 			if(window_size < min_so_far){
 				min_so_far = window_size;
 				start_idx = start;

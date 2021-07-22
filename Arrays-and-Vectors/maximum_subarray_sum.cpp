@@ -1,4 +1,4 @@
-// O)n^3) solution
+// O(n^3) solution
 /*
 // Including climits, which allows for usage of INT_MIN constant in C++
 #include <climits>
