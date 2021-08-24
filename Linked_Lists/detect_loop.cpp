@@ -1,4 +1,5 @@
 // detect loop in linked list
+// Floy's cycle detection algorithm
 
 #include<bits/stdc++.h>
 using namespace std;
