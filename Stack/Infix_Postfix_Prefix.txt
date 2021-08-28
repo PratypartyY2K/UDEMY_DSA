@@ -1,0 +1,61 @@
+Infix
+<operand><operator><operand>
+
+    Order of operation
+        1. Parenthesis
+        2. Exponents (right to left)
+        3. Multiplication and division (left to right)
+        4. Addition and Subtraction (left to right)
+
+Prefix (Polish operation)
+<operator><operand><operand>
+
+Postfix (reverse Poslish notation)
+<operand><operand><operator>
+
+2 * 3 + 5 * 4 - 9 => Infix
+
+2 3 * 5 4 * + 9 - => Postfix
+
+- + * 2 3 * 5 4 9 => Prefix
+
+We are assuming that input postfix expression will be correct and not handling
+any error condition
+
+Evaluate Postfix(exp) {
+    create a stack S
+    for i <- 0 to length(exp) - 1 {
+        if exp[i] is operand
+            Push(exp[i])
+        else if exp[i] is operator {
+            op2 <- pop()
+            op1 <- pop()
+            yes <- perform (exp[i],op1,op2)
+            Push(res)
+        }
+    }
+    return top of stack
+}
+
+Postfix evaluation
+2 3 * 5 4 * + 9 -
+~~~~~ (2*3=6)
+6 5 4 * + 9 -
+  ~~~~~ (5*4=20)
+6 20 + 9 -
+~~~~~~ (6+20=26)
+26 9 - 
+~~~~~~ (26-9=17)
+17
+
+Prefix evaluation
+- + * 2 3 * 5 4 9
+          ~~~~~ (4*5=20)
+- + * 2 3 20 9
+    ~~~~~(3*2=6)
+- + 6 20 9
+  ~~~~~~(20+6=26)
+- 26 9
+~~~~~~(26-9=17)
+17
+      
